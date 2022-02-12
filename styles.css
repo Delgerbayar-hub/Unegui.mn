@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    list-style: none;
+    text-decoration: none;
+}
+.container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.7fr 0.5fr 1.6fr 1fr;
+    grid-template-areas: 
+                       "nav nav nav nav2"
+                       "sr sr sr sr"
+                       "content1 content2 content3 content4"
+                       "footer footer footer footer";
+}
+nav{
+    background-color: #e60500;
+    grid-area: nav;
+}
+#nav2{
+    grid-area: nav2;
+    background-color: #e60500;
+}
+nav .logo{
+    height: 10vh;
+    float: left;
+    padding: 10px;
+}
+nav a{
+    color: white;
+    padding: 0px 7px;
+    float: left;
+    margin-top: 30px;
+    font-size: 16px;
+    vertical-align: middle;
+}
+#nav2 .zarnemeh{
+    background-color:#FFC300;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    border: hidden;
+    float: left;
+    padding: 8px;
+    margin-top: 25px;
+}
+#searchside{
+    background-color: #f4f6f6;
+    grid-area: sr;
+    position: relative;
+    height: 10vh;
+}
+.searchbox{
+    width: 60vh;
+    height: 30px;
+    display: flex;
+    padding: 10px;
+    border-color: #e60500;
+    border-width: medium;
+    border-right: none;
+    vertical-align: middle;
+    position:relative;
+    left: 13vh;
+    top: 3vh;
+}
+#bairshil{
+    position: absolute;
+    left: 73vh;
+    top: 3vh;
+    border-color: #e60500;
+    border-width:medium;
+    border-left: none;
+    height: 30px;
+    cursor:pointer;
+
+}
+#bairchil:focus{
+    outline: none;
+
+}
+.haihbutton{
+    position: absolute;
+    left: 95vh;
+    top: 3vh;
+    width: 6rem;
+    height: 30px;
+    padding: 0.2rem;
+    background-color: #e60500;
+    font-size: 15px;
+    color: white;
+    border: none;
+}
+#content1{
+    grid-area: content1;
+}
+#content2{
+    grid-area: content2;
+}
+#content3{
+    grid-area: content3;
+}
+#content4{
+    grid-area: content4;
+}
+.category-names img{
+    height: 45px;
+}
+.category-names {
+    position: relative;
+    left: 13vh;
+}
+.category-names p{
+    position: absolute;
+    top:0;
+}
+footer{
+    background-color: #e60500;
+    grid-area: footer;
+}
+@media only screen and (max-width:550px) {
+    .container{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas: 
+        "nav nav nav "
+        "sr sr sr"
+        "nav2 nav2 nav2"
+        "content1 content2 content3"
+        "content4 content4 content4"
+        "footer footer footer"; 
+    }
+#nav2{
+    background-color: white;
+}
+}
